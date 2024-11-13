@@ -2603,10 +2603,8 @@ App = function() {
 		for (var i = 0; i < space.bodyArr.length; i++) {
 			var body = space.bodyArr[i];
 			if (body && body.visible) {
-				if ((editorEnabled && !body.isStatic()) || (!editorEnabled && !body.isStatic())) {				
-					drawBody(fg.ctx, body, PIXEL_UNIT, "#0008", bodyColor(body));					
-				} else {
-					drawBody(bg.ctx, body, PIXEL_UNIT, "#FFF", "#000");
+				if ((editorEnabled) || (!editorEnabled && !body.isStatic())) {				
+					drawBody(fg.ctx, body, PIXEL_UNIT, body.isStatic() ? "#FFF" : "#0008", body.isStatic() ? "#000" : bodyColor(body));					
 				}
 			}
 		}
