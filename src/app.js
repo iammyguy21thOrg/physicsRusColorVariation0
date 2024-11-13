@@ -143,14 +143,14 @@ App = function() {
 	var editMode = EM_SELECT;
 	var editModeEventArr = [];
 	var selectionMode = SM_BODIES;
-	var snapEnabled = false;
+	var snapEnabled = true;
 	var selectedFeatureArr = [];
 	var markedFeatureArr = [];
 	var highlightFeatureArr = [];
 	var transformCenter = new vec2(0, 0);
 	var transformAxis = 0;
 	var transformScale = new vec2;	
-	var gridSize = 1;
+	var gridSize = 0.5;
 	var gridFrame = 10;
 	var scaledGridSize;
 	var snapCenterOffset = new vec2;
@@ -2603,7 +2603,7 @@ App = function() {
 		for (var i = 0; i < space.bodyArr.length; i++) {
 			var body = space.bodyArr[i];
 			if (body && body.visible) {
-				if (editorEnabled || (!editorEnabled && !body.isStatic())) {				
+				if ((!editorEnabled && !body.isStatic())) {				
 					drawBody(fg.ctx, body, PIXEL_UNIT, "#0008", bodyColor(body));					
 				}
 			}
