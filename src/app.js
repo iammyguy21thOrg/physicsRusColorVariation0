@@ -155,7 +155,7 @@ App = function() {
 	var scaledGridSize;
 	var snapCenterOffset = new vec2;
 	var snapOffset = new vec2;
-	var backgroundColor = "rgb(0, 26, 0)";
+	var backgroundColor = "rgb(0, 0, 0)";
 	//var backgroundColor = "rgb(95, 105, 118)";
 	var gridFrameColor = "#E6E6E6";
 	var gridColor = "#B3B3B3";
@@ -2604,7 +2604,7 @@ App = function() {
 			var body = space.bodyArr[i];
 			if (body && body.visible) {
 				if (editorEnabled || (!editorEnabled && !body.isStatic())) {				
-					drawBody(fg.ctx, body, PIXEL_UNIT, "#0000", bodyColor(body));					
+					drawBody(fg.ctx, body, PIXEL_UNIT, "#0008", bodyColor(body));					
 				}
 			}
 		}
@@ -2667,7 +2667,7 @@ App = function() {
 
 			if (editorEnabled) {				
 				var color = Color.parse(fillColor);
-				color.channels[3] = 0.5;				
+				color.channels[3] = 1;				
 				drawBodyShape(ctx, shape, lineWidth, outlineColor, color.rgba());
 			}
 			else {
