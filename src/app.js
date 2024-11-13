@@ -155,15 +155,15 @@ App = function() {
 	var scaledGridSize;
 	var snapCenterOffset = new vec2;
 	var snapOffset = new vec2;
-	var backgroundColor = "rgb(222, 222, 222)";
+	var backgroundColor = "rgb(0, 26, 0)";
 	//var backgroundColor = "rgb(95, 105, 118)";
-	var gridFrameColor = "#999";
-	var gridColor = "#C6C6C6";
+	var gridFrameColor = "#E6E6E6";
+	var gridColor = "#B3B3B3";
 	var selectionColor = "rgba(255, 160, 0, 1.0)";
-	var highlightColor = "rgba(192, 255, 255, 1.0)";	
-	var vertexColor = "#444";
-	var jointAnchorColor = "#80F";
-	var jointHelperColor = "#F0F";
+	var highlightColor = "rgba(255, 245, 235, 1.0)";	
+	var vertexColor = "#EEE";
+	var jointAnchorColor = "#FF6";
+	var jointHelperColor = "#FC6";
 	var selectionPattern;
 	var highlightPattern;
 
@@ -2557,7 +2557,7 @@ App = function() {
 				for (var i = 0; i < space.bodyArr.length; i++) {
 					var body = space.bodyArr[i];
 					if (body && body.isStatic()) {
-						drawBody(bg.ctx, body, PIXEL_UNIT, "#000", bodyColor(body));
+						drawBody(bg.ctx, body, PIXEL_UNIT, "#0000", bodyColor(body));
 					}
 				}
 			}
@@ -2604,7 +2604,7 @@ App = function() {
 			var body = space.bodyArr[i];
 			if (body && body.visible) {
 				if (editorEnabled || (!editorEnabled && !body.isStatic())) {				
-					drawBody(fg.ctx, body, PIXEL_UNIT, "#000", bodyColor(body));					
+					drawBody(fg.ctx, body, PIXEL_UNIT, "#0000", bodyColor(body));					
 				}
 			}
 		}
