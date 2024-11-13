@@ -132,7 +132,7 @@ App = function() {
 	var demoArr = [DemoCircles, DemoCar, DemoRagDoll, DemoSeeSaw, DemoPyramid, DemoCrank, DemoRope, DemoWeb, DemoBounce];
 	var sceneNameArr = [];
 	var sceneIndex;	
-	var randomColor = ["#BEB", "#48B", "#CAA", "#8D5", "#6BE", "#98D", "#E78", "#7BC", "#E9E", "#BCD", "#EB6", "#EE7"]; // Random colors for drawing bodies
+	var randomColor = ["#E00", "#F60", "#FC0", "#FF6", "#9F3", "#3C3", "#6FC", "#3CF", "#06F", "#96F", "#939", "#936"]; // Random colors for drawing bodies
 	var mouseBody;
 	var mouseJoint;
 	var creatingBody;
