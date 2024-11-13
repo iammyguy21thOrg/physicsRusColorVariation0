@@ -2557,7 +2557,7 @@ App = function() {
 				for (var i = 0; i < space.bodyArr.length; i++) {
 					var body = space.bodyArr[i];
 					if (body && body.isStatic()) {
-						drawBody(bg.ctx, body, PIXEL_UNIT, "#0000", bodyColor(body));
+						drawBody(bg.ctx, body, PIXEL_UNIT, "#FFF", "#000");
 					}
 				}
 			}
