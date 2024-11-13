@@ -2603,12 +2603,10 @@ App = function() {
 		for (var i = 0; i < space.bodyArr.length; i++) {
 			var body = space.bodyArr[i];
 			if (body && body.visible) {
-				if (!editorEnabled && !body.isStatic()) {				
+				if ((editorEnabled && !body.isStatic()) || (!editorEnabled && !body.isStatic())) {				
 					drawBody(fg.ctx, body, PIXEL_UNIT, "#0008", bodyColor(body));					
-				} else if (editorEnabled && !body.isStatic()) {
-					drawBody(fg.ctx, body, PIXEL_UNIT, "#0008", bodyColor(body));	
-				} else if (editorEnabled && body.isStatic()) {
-					drawBody(fg.ctx, body, PIXEL_UNIT, "#FFF", "#000");	
+				} else {
+					drawBody(bg.ctx, body, PIXEL_UNIT, "#FFF", "#000");
 				}
 			}
 		}
