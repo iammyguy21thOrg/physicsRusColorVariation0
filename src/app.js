@@ -150,7 +150,7 @@ App = function() {
 	var transformCenter = new vec2(0, 0);
 	var transformAxis = 0;
 	var transformScale = new vec2;	
-	var gridSize = 0.5;
+	var gridSize = 0.25;
 	var gridFrame = 10;
 	var scaledGridSize;
 	var snapCenterOffset = new vec2;
